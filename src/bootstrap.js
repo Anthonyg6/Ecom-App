@@ -16,10 +16,7 @@ function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
-        <Layout>
-          <p>Hello World this is an ECOM app</p>
-          <h2>testing web page to make sure it all works</h2>
-        </Layout>
+        <Layout />
       </BrowserRouter>
     </Provider>,
     document.querySelector(".app-wrapper")
