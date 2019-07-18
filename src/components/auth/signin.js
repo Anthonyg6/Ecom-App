@@ -7,7 +7,6 @@ class SignIn extends Component {
     return (
       <div className="sign-in">
         <SignInForm className="sign-in-form" />
-        Sign innnnn
       </div>
     );
   }
