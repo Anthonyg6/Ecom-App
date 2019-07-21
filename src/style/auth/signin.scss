@@ -14,6 +14,9 @@
 }
 
 .sign-in-form {
+  & > * {
+    grid-column: 1/-1;
+  }
   &-email {
     grid-row: email-s/email-e;
   }
@@ -30,5 +33,11 @@
   &-login {
     margin-top: 39px;
     grid-row: login-s/login-e;
+  }
+
+  &-details {
+    grid-row: 1/-1;
+    justify-self: end;
+    align-self: start;
   }
 }
