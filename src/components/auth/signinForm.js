@@ -24,8 +24,9 @@ class SignInForm extends Component {
           name="password"
           component={FormInput}
         />
+        <div className="sign-in-form-line" />
         <Field
-          className="sign-in-login"
+          className="sign-in-form-login"
           onClick={() => console.log("trynna submit")}
           type="login"
           title="Login"
