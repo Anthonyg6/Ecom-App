@@ -9,7 +9,7 @@ class Navbar extends Component {
         {this.props.navbarLinks.map((link, index) => {
           return (
             <a
-              className="navbar-link"
+              className={`navbar-link ${link.active ? "green-text" : ""}`}
               key={index}
               onClick={() => console.log("Trynna tab over")}
             >
