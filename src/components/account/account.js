@@ -8,6 +8,19 @@ import AccountInformation from "./accountInformation";
 
 class Account extends Component {
   componentDidMount() {
+    const headerLinks = [
+      {
+        id: 0,
+        title: "Shop",
+        path: "/shop"
+      },
+      {
+        id: 1,
+        title: "Logout",
+        path: "/"
+      }
+    ];
+
     const navbarLinks = [
       {
         id: 0,
@@ -23,7 +36,7 @@ class Account extends Component {
       }
     ];
 
-    this.props.setHeaderLinks([]);
+    this.props.setHeaderLinks(headerLinks);
     this.props.setNavbarLinks(navbarLinks);
   }
 
