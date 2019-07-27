@@ -22,3 +22,7 @@ body {
 @import "page-title.scss";
 @import "form-fields.scss";
 @import "details.scss";
+
+@import "account/account";
+@import "account/account-info.scss";
+@import "account/purchase-history.scss";
