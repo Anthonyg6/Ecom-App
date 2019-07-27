@@ -1,5 +1,15 @@
 .purchase-history {
-  // &-page-title {
+  &-page-title {
+    border-bottom: 1px solid #ccc;
+  }
 
-  // }
+  &-bottom-border {
+    border-bottom: 1px solid #f2f2f2;
+  }
+}
+
+.purchases {
+}
+
+.purchases-detail {
 }
