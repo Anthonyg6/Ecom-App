@@ -15,7 +15,7 @@ export function fetchUserPurchases() {
         id: 0,
         total: "8.00",
         orderNumber: "245566AD",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: "-0000",
         user: {
           name: "Jayce Gallegos",
@@ -26,7 +26,7 @@ export function fetchUserPurchases() {
         id: 1,
         total: "18.52",
         orderNumber: "365444AD",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: "-0000",
         user: {
           name: "Anthony Gallegos",
@@ -37,7 +37,7 @@ export function fetchUserPurchases() {
         id: 2,
         total: "9.60",
         orderNumber: "2466688AD",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: "-0000",
         user: {
           name: "Mike Jones",
@@ -48,7 +48,7 @@ export function fetchUserPurchases() {
         id: 3,
         total: "26.55",
         orderNumber: "209566AD",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: "-0000",
         user: {
           name: "Tony Gallegos",
@@ -59,7 +59,7 @@ export function fetchUserPurchases() {
         id: 4,
         total: "14.56",
         orderNumber: "277445AD",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: "-0000",
         user: {
           name: "Joe Smith",
@@ -70,7 +70,7 @@ export function fetchUserPurchases() {
         id: 5,
         total: "20.00",
         orderNumber: "255569D",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: "-0000",
         user: {
           name: "Joseph Smith Jr",
@@ -81,7 +81,7 @@ export function fetchUserPurchases() {
         id: 6,
         total: "45.66",
         orderNumber: "2568966AD",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: "-0000",
         user: {
           name: "Lebron James",
@@ -92,7 +92,7 @@ export function fetchUserPurchases() {
         id: 7,
         total: "566.00",
         orderNumber: "258894AD",
-        orderDate: new Date(),
+        orderDate: new Date().toDateString(),
         creditCard: "-0000",
         user: {
           name: "Anthony Davis",
