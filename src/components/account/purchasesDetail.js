@@ -37,7 +37,7 @@ class PurchaseDetail extends Component {
         <PurchaseDetailLabel
           className="purchase-detail-order-shipping-address"
           title="Shipping Address"
-          value={`${name}\n${shippingAddress}`}
+          value={`${name}${shippingAddress}`}
         />
         <PurchaseDetailLabel
           className="purchase-detail-order-total"
