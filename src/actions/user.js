@@ -1,6 +1,7 @@
 import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL } from "./types";
 
 export function setPurchaseDetail(id) {
+  console.log(id);
   return {
     type: SET_PURCHASE_DETAIL,
     payload: id

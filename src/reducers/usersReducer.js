@@ -25,7 +25,7 @@ export default function(state = INITIAL_STATE, action) {
     case SET_PURCHASE_DETAIL:
       let purchaseDetail;
       state.purchases.map(purchase => {
-        if ((purchase.id = action.payload)) {
+        if (purchase.id == action.payload) {
           purchaseDetail = purchase;
         }
       });
