@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 
-import { FormInput, FormButton } from "../formFields";
+import { FormInput, FormButton, LongGrayButton } from "../formFields";
 
 class AccountInformationForm extends Component {
   render() {
@@ -58,6 +58,16 @@ class AccountInformationForm extends Component {
           placeholder="Zip Code"
           name="zipcode"
           component={FormInput}
+        />
+
+        <Field
+          className="account-information-form-change-password"
+          onClick={() => console.log("Trynna show passwords")}
+          labelTitle="Password"
+          type="button"
+          title="Change Password"
+          name="change-password"
+          component={LongGrayButton}
         />
         {/*<Field
           className="sign-in-form-password"
