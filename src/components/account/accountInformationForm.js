@@ -4,6 +4,13 @@ import { reduxForm, Field } from "redux-form";
 import { FormInput, FormButton, LongGrayButton } from "../formFields";
 
 class AccountInformationForm extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      showPasswords: false
+    };
+  }
   render() {
     const { className, handleSubmit } = this.props;
     return (
@@ -60,15 +67,48 @@ class AccountInformationForm extends Component {
           component={FormInput}
         />
 
-        <Field
-          className="account-information-form-change-password"
-          onClick={() => console.log("Trynna show passwords")}
-          labelTitle="Password"
-          type="button"
-          title="Change Password"
-          name="change-password"
-          component={LongGrayButton}
-        />
+        {this.state.showPasswords ? (
+          [
+            <Field
+              key={0}
+              className="account-information-form-current"
+              type="password"
+              title="Current Password"
+              placeholder="Current Password"
+              name="current"
+              component={FormInput}
+            />,
+            <Field
+              key={1}
+              className="account-information-form-new"
+              type="password"
+              title="New Password"
+              placeholder="New Password"
+              name="new"
+              component={FormInput}
+            />,
+            <Field
+              key={2}
+              className="account-information-form-confirm"
+              type="password"
+              title="Confirm Password"
+              placeholder="Confirm Password"
+              name="confirm"
+              component={FormInput}
+            />
+          ]
+        ) : (
+          <Field
+            className="account-information-form-change-password"
+            onClick={() => this.setState({ showPasswords: true })}
+            labelTitle="Password"
+            type="button"
+            title="Change Password"
+            name="change-password"
+            component={LongGrayButton}
+          />
+        )}
+
         {/*<Field
           className="sign-in-form-password"
           type="password"
