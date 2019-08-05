@@ -1,21 +1,35 @@
 // import { SET_SHOP_CATEGORIES } from "../actions/types";
 // import { SET_NAVBAR_LINKS } from "../actions/types";
 
-import { SET_SHOP_PRODUCTS } from "../actions/types";
+import {
+  SET_SHOP_CATEGORIES,
+  SET_SHOP_PRODUCTS,
+  FILTER_PRODUCTS_WITH_CATEGORY_ID
+} from "../actions/types";
 
 const INITIAL_STATE = {
   categories: [],
-  selectedCategoryId: 0,
   productsSelected: [],
   products: []
 };
 
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
+    case SET_SHOP_CATEGORIES:
+      const categories = action.payload;
+      return {
+        ...state,
+        categories
+      };
     case SET_SHOP_PRODUCTS:
       return {
         ...state,
         products: action.payload
+      };
+    case FILTER_PRODUCTS_WITH_CATEGORY_ID:
+      console.log(action.payload);
+      return {
+        ...state
       };
   }
   return state;
