@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 import ShopSearchBar from "./shopSearchBar";
+import ShopProducts from "./shopProduct";
 
 class Shop extends Component {
   componentDidMount() {
@@ -40,14 +41,7 @@ class Shop extends Component {
         />
         <div className="shop-products">
           {this.props.filteredProducts.map(product => {
-            return (
-              <div key={product.id} className="shop-product">
-                <div className="shop-product-title">{product.title}</div>
-                <div className="shop-product-description">
-                  {product.description}
-                </div>
-              </div>
-            );
+            return <ShopProducts {...product} key={product.id} />;
           })}
         </div>
         {/* shop cart button*/}
