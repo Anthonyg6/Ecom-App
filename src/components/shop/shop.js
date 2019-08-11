@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import * as actions from "../../actions";
 import ShopSearchBar from "./shopSearchBar";
 import ShopProducts from "./shopProduct";
+import ShopCart from "./shopCart";
 
 class Shop extends Component {
   componentDidMount() {
@@ -33,6 +34,7 @@ class Shop extends Component {
   };
 
   render() {
+    return <ShopCart className="shop-cart" />;
     return (
       <div className="shop">
         <ShopSearchBar
@@ -44,7 +46,8 @@ class Shop extends Component {
             return <ShopProducts {...product} key={product.id} />;
           })}
         </div>
-        {/* shop cart button*/}
+
+        {this.state.showCart ? <ShopCart className="shop-shop-cart" /> : ""}
       </div>
     );
   }
