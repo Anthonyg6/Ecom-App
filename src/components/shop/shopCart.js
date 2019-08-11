@@ -8,10 +8,13 @@ function CartButton({ className, icon }) {
   );
 }
 
-function CartContent({ className }) {
+function CartContent({ className, products }) {
+  let count = products.length;
   return (
     <div className={`${className} cart-content`}>
-      <div>carton content</div>
+      <div className="title">Cart ({count})</div>
+      <div className="products" />
+      <div className="footer" />
     </div>
   );
 }
@@ -22,7 +25,7 @@ class ShopCart extends Component {
     return (
       <div className={`${className} shop-cart`}>
         <CartButton className="shop-cart-toggle" icon="fas fa-times" />
-        <CartContent className="shop-cart-content" />
+        <CartContent className="shop-cart-content" products={[423, 452, 555]} />
       </div>
     );
   }
