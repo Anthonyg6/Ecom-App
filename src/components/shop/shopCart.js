@@ -10,11 +10,23 @@ function CartButton({ className, icon }) {
 
 function CartContent({ className, products }) {
   let count = products.length;
+  let productsJSX = products.map(product => <h1 key={product}>{product}</h1>);
   return (
     <div className={`${className} cart-content`}>
       <div className="title">Cart ({count})</div>
-      <div className="products" />
-      <div className="footer" />
+      <div className="products">{productsJSX}</div>
+      <CartFooter className="footer" products={products} />
+    </div>
+  );
+}
+
+function CartFooter({ className, products }) {
+  const price = 7.96;
+  return (
+    <div className={`${className} cart-footer`}>
+      <a className="cart-footer-checkout">Checkout</a>
+      <div className="cart-footer-subtotal">Subtotal</div>
+      <div className="cart-footer-price">${price}</div>
     </div>
   );
 }
