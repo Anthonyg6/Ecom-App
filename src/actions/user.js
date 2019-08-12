@@ -1,9 +1,57 @@
-import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL } from "./types";
+import {
+  SET_USER_PURCHASES,
+  SET_PURCHASE_DETAIL,
+  SET_CART_PRODUCTS
+} from "./types";
 
 export function setPurchaseDetail(id) {
   return {
     type: SET_PURCHASE_DETAIL,
     payload: id
+  };
+}
+
+export function fetchCartProducts() {
+  return {
+    type: SET_CART_PRODUCTS,
+    payload: [
+      {
+        id: 0,
+        product: {
+          id: 0,
+          title: "Javascript in the Browser",
+          description:
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur?",
+          price: 1.99,
+          belongsTo: [0, 1]
+        },
+        quantity: 1
+      },
+      {
+        id: 1,
+        product: {
+          id: 1,
+          title: "Graph Database",
+          description:
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid",
+          price: 2.99,
+          belongsTo: [0, 5]
+        },
+        quantity: 1
+      },
+      {
+        id: 2,
+        product: {
+          id: 1,
+          title: "Graph Database",
+          description:
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid",
+          price: 2.99,
+          belongsTo: [0, 5]
+        },
+        quantity: 1
+      }
+    ]
   };
 }
 
