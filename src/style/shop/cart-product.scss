@@ -12,6 +12,9 @@
     grid-row: s/m;
     grid-column: title-s/title-e;
     align-self: start;
+    font-family: "Encode Sans Condensed";
+    font-size: 18px;
+    color: #e6e6e6;
   }
   &-quantity {
     grid-row: m/e;
@@ -24,6 +27,9 @@
     grid-row: m/e;
     grid-column: remove-s/remove-e;
     justify-self: start;
+    font-size: 18px;
+    text-decoration: underline;
+    cursor: pointer;
   }
   &-price {
     align-self: center;
