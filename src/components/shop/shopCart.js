@@ -3,6 +3,7 @@ import CartProduct from "./cartProduct";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 import CartButton from "./cartButton";
+import history from "../../history";
 
 function CartContent({ className, products }) {
   let count = products.length;
@@ -22,7 +23,12 @@ function CartFooter({ className, products }) {
   const price = 7.96;
   return (
     <div className={`${className} cart-footer`}>
-      <a className="cart-footer-checkout">Checkout</a>
+      <a
+        onClick={() => history.push("/order/review")}
+        className="cart-footer-checkout"
+      >
+        Checkout
+      </a>
       <div className="cart-footer-subtotal">Subtotal</div>
       <div className="cart-footer-price">${price}</div>
     </div>
