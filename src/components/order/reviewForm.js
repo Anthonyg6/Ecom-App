@@ -17,7 +17,7 @@ class ReviewForm extends Component {
         <div className="review-form-line" />
         <Field
           className="review-form-proceed"
-          onClick={() => history.push("/account")}
+          onClick={() => history.push("/signin")}
           type="submit"
           title="Proceed To Checkout"
           name="proceed"
@@ -25,7 +25,7 @@ class ReviewForm extends Component {
         />
         <Field
           className="review-form-back"
-          onClick={() => history.push("/signin")}
+          onClick={() => history.push("/shop")}
           type="button"
           title="Back"
           name="back"
