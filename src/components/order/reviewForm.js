@@ -4,6 +4,7 @@ import { reduxForm, Field } from "redux-form";
 import { FormButton } from "../formFields";
 
 import history from "../../history";
+import ReviewProducts from "./reviewProducts";
 
 class ReviewForm extends Component {
   onSubmit = fields => {
@@ -14,6 +15,7 @@ class ReviewForm extends Component {
 
     return (
       <form onSubmit={handleSubmit} className={`${className} review-form`}>
+        <ReviewProducts className="review-products-title" />
         <div className="review-form-line" />
         <Field
           className="review-form-proceed"

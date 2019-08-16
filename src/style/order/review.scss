@@ -3,7 +3,7 @@
   grid-column: s/e;
   &-form {
     display: grid;
-    grid-template-rows: [line-s] 24px [line-e button-s] 38px [button-e];
+    grid-template-rows: [product-s] 400px [product-e line-s] 24px [line-e button-s] 38px [button-e];
     grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e proceed-s] 1fr [proceed-e] 1fr;
   }
 }
@@ -17,6 +17,7 @@
   }
   &-products {
     grid-column: 1/-1;
+    grid-row: product-s/product-e;
   }
   &-proceed {
     grid-row: button-s/button-e;
