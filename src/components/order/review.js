@@ -6,6 +6,14 @@ import PageTitle from "../pageTitle";
 import ReviewForm from "./reviewForm";
 
 class Review extends Component {
+  componentDidCatch() {
+    this.props.setHeaderLinks([]);
+    this.props.setNavBarLinks([]);
+  }
+
+  onSubmit = fields => {
+    console.log(fields);
+  };
   render() {
     return (
       <div className="review">

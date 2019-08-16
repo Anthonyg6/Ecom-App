@@ -7,15 +7,12 @@ import history from "../../history";
 import ReviewProducts from "./reviewProducts";
 
 class ReviewForm extends Component {
-  onSubmit = fields => {
-    console.log(fields);
-  };
   render() {
     const { className, handleSubmit } = this.props;
 
     return (
       <form onSubmit={handleSubmit} className={`${className} review-form`}>
-        <ReviewProducts className="review-products-title" />
+        <ReviewProducts className="review-form-products" />
         <div className="review-form-line" />
         <Field
           className="review-form-proceed"

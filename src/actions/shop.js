@@ -66,7 +66,8 @@ export function fetchShopProducts() {
         description:
           "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur?",
         price: 1.99,
-        belongsTo: [0, 1]
+        belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80"
       },
       {
         id: 1,
@@ -74,7 +75,8 @@ export function fetchShopProducts() {
         description:
           "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid",
         price: 2.99,
-        belongsTo: [0, 5]
+        belongsTo: [0, 5],
+        imageUrl: "http://via.placeholder.com/80x80"
       },
       {
         id: 2,
@@ -82,7 +84,8 @@ export function fetchShopProducts() {
         description:
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
         price: 5.99,
-        belongsTo: [0, 1, 4, 6]
+        belongsTo: [0, 1, 4, 6],
+        imageUrl: "http://via.placeholder.com/80x80"
       },
       {
         id: 3,
@@ -90,7 +93,8 @@ export function fetchShopProducts() {
         description:
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
         price: 2.99,
-        belongsTo: [0, 1]
+        belongsTo: [0, 1],
+        imageUrl: "http://via.placeholder.com/80x80"
       },
       {
         id: 4,
@@ -98,7 +102,8 @@ export function fetchShopProducts() {
         description:
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
         price: 1.99,
-        belongsTo: [0, 5]
+        belongsTo: [0, 5],
+        imageUrl: "http://via.placeholder.com/80x80"
       },
       {
         id: 5,
@@ -106,7 +111,8 @@ export function fetchShopProducts() {
         description:
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
         price: 1.95,
-        belongsTo: [0, 4]
+        belongsTo: [0, 4],
+        imageUrl: "http://via.placeholder.com/80x80"
       },
       {
         id: 6,
@@ -114,7 +120,8 @@ export function fetchShopProducts() {
         description:
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur",
         price: 5.99,
-        belongsTo: [0, 1, 2, 3, 4, 5, 6]
+        belongsTo: [0, 1, 2, 3, 4, 5, 6],
+        imageUrl: "http://via.placeholder.com/80x80"
       }
     ]
   };

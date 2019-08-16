@@ -31,7 +31,8 @@ export function fetchCartProducts() {
           description:
             "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur?",
           price: 1.99,
-          belongsTo: [0, 1]
+          belongsTo: [0, 1],
+          imageUrl: "http://via.placeholder.com/80x80"
         },
         quantity: 1
       },
@@ -43,7 +44,8 @@ export function fetchCartProducts() {
           description:
             "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid",
           price: 2.99,
-          belongsTo: [0, 5]
+          belongsTo: [0, 5],
+          imageUrl: "http://via.placeholder.com/80x80"
         },
         quantity: 1
       },
@@ -55,7 +57,8 @@ export function fetchCartProducts() {
           description:
             "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid",
           price: 2.99,
-          belongsTo: [0, 5]
+          belongsTo: [0, 5],
+          imageUrl: "http://via.placeholder.com/80x80"
         },
         quantity: 1
       }
