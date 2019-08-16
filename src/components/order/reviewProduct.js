@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import GreenPriceTag from "../greenPriceTag";
 
-class ReivewProduct extends Component {
+class ReviewProduct extends Component {
   render() {
     const { product, quantity } = this.props;
     const { imageUrl, title, price } = product;
@@ -20,4 +20,4 @@ class ReivewProduct extends Component {
   }
 }
 
-export default ReivewProduct;
+export default ReviewProduct;
