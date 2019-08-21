@@ -9,6 +9,15 @@
     grid-row: tog-s/tog-s;
     grid-column: s/e;
     justify-self: end;
+  }
+  &-content {
+    grid-row: con-s/con-s;
+    grid-column: s/e;
+  }
+}
+
+.shop-cart {
+  &-toggle {
     z-index: 6;
   }
   &-content {
@@ -16,11 +25,11 @@
     width: 520px;
     background-color: #333;
     box-shadow: -3px 20px 20px 0 rgba(0, 0, 0, 0.2);
-    grid-row: con-s/con-s;
-    grid-column: s/e;
   }
 }
 .cart-button {
+  transition: all 0.3s ease;
+
   background-color: #333;
   color: white;
   font-size: 25px;
@@ -39,8 +48,8 @@
   grid-template-columns: [footer-s] 30px [s] 1fr [e] 30px [footer-e];
 
   .title {
-    grid-row: title-s/title-e;
     grid-column: s/e;
+    grid-row: title-s/title-e;
     font-weight: 600;
     font-size: 30px;
     font-family: "Titillium Web";
@@ -77,21 +86,23 @@
     display: grid;
     justify-items: center;
     align-items: center;
+
     height: 38px;
     width: 183px;
     border-radius: 20px;
     background-color: #00cb79;
+
     font-weight: 600px;
     font-size: 1.6rem;
     color: white;
-    font-family: "Open Sans";
+
+    transition: all 0.3s ease-in-out;
+
     cursor: pointer;
 
     &:focus {
       outline: none;
     }
-
-    transition: all 0.3s ease-in-out;
     &:hover {
       transform: scale(0.97);
     }
