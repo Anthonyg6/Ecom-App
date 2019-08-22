@@ -1,21 +1,52 @@
 .shipping {
+  display: grid;
+  grid-row: content-s/content-e;
+  grid-column: s/e;
   &-form {
+    display: grid;
+    grid-template-rows:
+      [name-s] 64px [name-e] 35px [address-s] 64px [address-e city-s] 64px [city-e state-zip-s] 64px [state-zip-e] minmax(
+        20px,
+        81px
+      )
+      [line-s] 24px [line-e button-s] 38px [button-e];
+    grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e use-this-address-s] 1fr [use-this-address-e] 1fr;
   }
 }
 
 .shipping-form {
   &-name {
+    grid-row: name-s/name-e;
   }
   &-address {
+    grid-row: address-s/address-e;
   }
   &-city {
+    grid-row: city-s/city-e;
+  }
+  &-state,
+  &-zipcode {
+    grid-row: state-zip-s/state-zip-e;
+    grid-column: back-s;
+    input {
+      width: 200px;
+    }
   }
   &-zipcode {
-  }
-  &-state {
+    transform: translateX(226px);
   }
   &-line {
+    grid-row: line-s/line-e;
+    grid-column: 1/-1;
+    border-top: 1px solid #ccc;
+    margin-bottom: 24px;
   }
   &-use-this-address {
+    grid-row: button-s/button-e;
+    grid-column: use-this-address-s/use-this-address-e;
+  }
+  &-back {
+    grid-row: button-s/button-e;
+    grid-column: back-s/back-e;
   }
 }

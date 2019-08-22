@@ -36,14 +36,6 @@ class ShippingForm extends Component {
           component={FormInput}
         />
         <Field
-          className="shipping-form-zipcode"
-          type="zipcode"
-          title="Zip Code"
-          placeholder="Zip Code"
-          name="zipcode"
-          component={FormInput}
-        />
-        <Field
           className="shipping-form-state"
           type="state"
           title="State"
@@ -51,16 +43,17 @@ class ShippingForm extends Component {
           name="state"
           component={FormInput}
         />
+        <Field
+          className="shipping-form-zipcode"
+          type="zipcode"
+          title="Zip Code"
+          placeholder="Zip Code"
+          name="zipcode"
+          component={FormInput}
+        />
 
         <div className="shipping-form-line" />
-        <Field
-          className="shipping-form-use-this-address"
-          onClick={() => history.push("/information/payment")}
-          type="submit"
-          title="Use This Address"
-          name="use-this-address"
-          component={FormButton}
-        />
+
         <Field
           className="shipping-form-back"
           onClick={() => history.push("/signin")}
@@ -68,6 +61,14 @@ class ShippingForm extends Component {
           title="Back"
           name="back"
           short={true}
+          component={FormButton}
+        />
+        <Field
+          className="shipping-form-use-this-address"
+          onClick={() => history.push("/information/payment")}
+          type="submit"
+          title="Use This Address"
+          name="use-this-address"
           component={FormButton}
         />
       </form>

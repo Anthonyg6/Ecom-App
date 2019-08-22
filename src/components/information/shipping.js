@@ -16,12 +16,12 @@ class Shipping extends Component {
   };
   render() {
     return (
-      <div className="shipping-form">
+      <div className="shipping">
         <PageTitle
-          className="shipping-form-page-title"
+          className="shipping-page-title"
           title="Shipping Information"
         />
-        <ShippingForm onSubmit={this.onSubmit} className="shipping-form-form" />
+        <ShippingForm onSubmit={this.onSubmit} className="shipping-form" />
       </div>
     );
   }
