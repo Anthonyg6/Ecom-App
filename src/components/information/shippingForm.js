@@ -72,7 +72,7 @@ class ShippingForm extends Component {
           name="use-this-address"
           component={FormButton}
         />
-        <OrderSummary className="shipping-form-summary" />
+        <OrderSummary className="shipping-form-order-summary" />
       </form>
     );
   }
