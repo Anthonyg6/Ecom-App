@@ -22,7 +22,7 @@ class OrderSummary extends Component {
         />
         <InfoTitle
           className="order-summary-subtotal"
-          title={`${amtStickers}`}
+          title={`${amtStickers} stickers`}
           value={`$${subtotal}`}
         />
         <InfoTitle

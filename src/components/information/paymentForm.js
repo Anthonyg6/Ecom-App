@@ -2,80 +2,67 @@ import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 
 import { FormInput, FormButton } from "../formFields";
+import OrderSummary from "./orderSummary";
 
 import history from "../../history";
 
 class PaymentForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
-    const info = [
-      {
-        id: 0,
-        title: "At least 6 characters"
-      },
-      {
-        id: 1,
-        title: "At least one number"
-      },
-      {
-        id: 2,
-        title: "At least one symbol"
-      }
-    ];
-
     return (
-      <form onSubmit={handleSubmit} className={`${className} sign-up-form`}>
+      <form onSubmit={handleSubmit} className={`${className} payment-form`}>
         <Field
-          className="sign-up-form-name"
+          className="payment-form-name"
           type="name"
-          title="Name"
+          title="Name on Credit Card"
           placeholder="Name"
           name="name"
           component={FormInput}
         />
         <Field
-          className="sign-up-form-email"
-          type="email"
-          title="Email"
-          placeholder="Email"
-          name="email"
-          component={FormInput}
-        />
-        <Field
-          className="sign-up-form-password"
-          type="password"
-          title="Password"
-          placeholder="Password"
-          name="password"
-          component={FormInput}
-        />
-        <Field
-          className="sign-up-form-confirm"
-          type="password"
-          title="Confirm Password"
-          placeholder="Confirm Password"
-          name="confirm"
+          className="payment-form-card"
+          type="card"
+          title="Credit Card Number"
+          placeholder="____-____-____-____"
+          name="card"
           component={FormInput}
         />
 
-        <div className="sign-up-form-line" />
         <Field
-          className="sign-up-form-login"
-          onClick={() => history.push("/account")}
+          className="payment-form-expiration"
+          type="expiration"
+          title="Expiration Date"
+          placeholder="Expiration"
+          name="state"
+          component={FormInput}
+        />
+        <Field
+          className="payment-form-ccv"
+          type="CCV"
+          title="CCV"
+          placeholder="CCV"
+          name="CCV"
+          component={FormInput}
+        />
+        <div className="payment-form-line" />
+        <Field
+          className="payment-form-pay-complete"
+          onClick={() => history.push("/information/payment")}
           type="submit"
-          title="Create Account"
-          name="login"
+          title="Pay & Complete"
+          name="pay-complete"
           component={FormButton}
         />
         <Field
-          className="sign-up-form-back"
-          onClick={() => history.push("/signin")}
+          className="payment-form-back"
+          onClick={() => history.push("/information/shipping")}
           type="button"
           title="Back"
           name="back"
           short={true}
           component={FormButton}
         />
+        <OrderSummary className="payment-form-order-summary" />
       </form>
     );
   }
