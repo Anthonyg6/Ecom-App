@@ -12,7 +12,8 @@ class SignIn extends Component {
     this.props.setNavbarLinks([]);
   }
   onSubmit = fields => {
-    console.log(fields);
+    this.props.signIn(fields);
+    this.props.history.push("/account");
   };
   render() {
     return (
